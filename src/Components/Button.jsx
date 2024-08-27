@@ -1,8 +1,13 @@
-const Button = ({text}) => {
+const Button = () => {
 
-    const HandleClickButton = (title) => console.log('HandleClick ' + title)
+    let count = 0
 
-    return <button onClick={() => HandleClickButton(text)}>{text} </button>
+    const HandleClickButton = () => {
+        count = count + 1
+        console.log('HandleClick ' + count)
+    }
+
+    return <button onClick={HandleClickButton}>Boton: {count} </button>
 };
 
 export default Button
